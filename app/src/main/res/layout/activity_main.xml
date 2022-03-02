@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Length(Ft):"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Width(Ft):"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edtLength"
+        app:layout_constraintStart_toStartOf="@+id/edtLength"
+        app:layout_constraintTop_toBottomOf="@+id/edtLength" />
+
+    <EditText
+        android:id="@+id/edtThickness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Thickenss(In):"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edtWidth"
+        app:layout_constraintStart_toStartOf="@+id/edtWidth"
+        app:layout_constraintTop_toBottomOf="@+id/edtWidth" />
+
+    <EditText
+        android:id="@+id/edtPricePer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="$SqFt:"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edtThickness"
+        app:layout_constraintStart_toStartOf="@+id/edtThickness"
+        app:layout_constraintTop_toBottomOf="@+id/edtThickness" />
+
+    <TextView
+        android:id="@+id/txtYards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Yards"
+        app:layout_constraintEnd_toEndOf="@+id/clkButton"
+        app:layout_constraintStart_toStartOf="@+id/clkButton"
+        app:layout_constraintTop_toBottomOf="@+id/clkButton"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/clkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#008080"
+        android:backgroundTint="#008080"
+        android:text="Calculate"
+        app:backgroundTint="#008080"
+        app:layout_constraintEnd_toEndOf="@+id/edtPricePer"
+        app:layout_constraintStart_toStartOf="@+id/edtPricePer"
+        app:layout_constraintTop_toBottomOf="@+id/edtPricePer" />
+
+    <TextView
+        android:id="@+id/txtBags80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Bags80"
+        app:layout_constraintEnd_toEndOf="@+id/txtYards"
+        app:layout_constraintStart_toStartOf="@+id/txtYards"
+        app:layout_constraintTop_toBottomOf="@+id/txtYards"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtBags60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Bags60"
+        app:layout_constraintEnd_toEndOf="@+id/txtBags80"
+        app:layout_constraintStart_toStartOf="@+id/txtBags80"
+        app:layout_constraintTop_toBottomOf="@+id/txtBags80"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtBags40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Bags40"
+        app:layout_constraintEnd_toEndOf="@+id/txtBags60"
+        app:layout_constraintStart_toStartOf="@+id/txtBags60"
+        app:layout_constraintTop_toBottomOf="@+id/txtBags60"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txtEstimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Estimate"
+        app:layout_constraintEnd_toEndOf="@+id/txtBags40"
+        app:layout_constraintStart_toStartOf="@+id/txtBags40"
+        app:layout_constraintTop_toBottomOf="@+id/txtBags40"
+        android:textSize="20sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
